@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>قائمة المهمات - ToDo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body dir="rtl">
+  <main class="app">
+    <header>
+      <h1>قائمة المهمات</h1>
+      <p class="subtitle">بسيطة ✨ — أضف مهمة واضغط Enter أو زر الإضافة</p>
+    </header>
+
+    <section class="input-area">
+      <input id="taskInput" type="text" placeholder="اكتب المهمة هنا..." autocomplete="off" />
+      <button id="addBtn">أضف</button>
+    </section>
+
+    <section class="controls">
+      <div class="filters">
+        <button data-filter="all" class="active">الكل</button>
+        <button data-filter="active">غير المنجزة</button>
+        <button data-filter="completed">المنجزة</button>
+      </div>
+      <div class="tools">
+        <button id="clearCompleted">مسح المنجزة</button>
+        <button id="exportBtn">تصدير JSON</button>
+        <label class="import-label">
+          استيراد
+          <input id="importFile" type="file" accept="application/json" />
+        </label>
+      </div>
+    </section>
+
+    <section>
+      <ul id="todoList" class="todo-list"></ul>
+    </section>
+
+    <footer class="footer">
+      <span id="count"></span>
+      <small>محفوظ تلقائياً في المتصفح</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
